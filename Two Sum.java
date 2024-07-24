@@ -31,7 +31,23 @@ class Solution {
     }
 }
 
-
+// Loop solution
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        // Iterate through each number in the array
+        for (int i = 0; i < nums.length; i++) {
+            // For each number, check the rest of the array
+            for (int j = i + 1; j < nums.length; j++) {
+                // Check if the sum of these two numbers equals the target
+                if (nums[i] + nums[j] == target) {
+                    return new int[] { i, j };
+                }
+            }
+        }
+        // If no valid indices are found, throw an exception
+        throw new IllegalArgumentException("No two sum solution");
+    }
+}
 
 
 
